@@ -8,7 +8,7 @@ import java.time.OffsetDateTime;
 @Service
 public class TransacaoService {
 
-    public void validarTransacao(TransacaoDTO transacaoDTO){
+    public void validarTransacao(TransacaoDTO transacaoDTO) throws Exception {
         // Valor maior ou igual a 0
         if(transacaoDTO.getValor().compareTo(BigDecimal.ZERO) < 0 ){
             // Transação não válida
@@ -22,12 +22,12 @@ public class TransacaoService {
 
         // Data presente
         if(transacaoDTO.getDataHora() == null){
-            throw new NullPointerException("Erro: Data nula");
+            throw new Exception("Erro: Data nula");
         }
 
         // Valor presente
         if(transacaoDTO.getValor() == null){
-            throw new NullPointerException("Erro: Valor nulo");
+            throw new Exception("Erro: Valor nulo");
         }
     }
 }
