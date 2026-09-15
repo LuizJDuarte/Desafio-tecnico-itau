@@ -1,4 +1,4 @@
-package dev.desafios.itauDesafio;
+package dev.desafios.itauDesafio.Transacoes;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
