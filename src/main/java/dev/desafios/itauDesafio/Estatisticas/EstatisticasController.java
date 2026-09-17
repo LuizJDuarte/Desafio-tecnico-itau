@@ -12,7 +12,7 @@ import java.time.OffsetDateTime;
 
 @Slf4j
 @RestController
-@RequestMapping("/estatística")
+@RequestMapping("/estatistica")
 public class EstatisticasController {
 
     @Autowired
