@@ -1,5 +1,6 @@
 package dev.desafios.itauDesafio.Estatisticas;
 
+import dev.desafios.itauDesafio.Docs.EstatisticaControllerDoc;
 import dev.desafios.itauDesafio.Transacoes.TransacaoRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +14,7 @@ import java.time.OffsetDateTime;
 @Slf4j
 @RestController
 @RequestMapping("/estatistica")
-public class EstatisticasController {
+public class EstatisticasController implements EstatisticaControllerDoc {
 
     @Autowired
     private EstatisticaProperties estatisticaProperties;

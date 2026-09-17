@@ -1,15 +1,15 @@
 package dev.desafios.itauDesafio.Estatisticas;
 
-import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
+import org.springframework.validation.annotation.Validated;
 
-
+@Validated
 @ConfigurationProperties(prefix = "estatistica")
 public record EstatisticaProperties(
 
-        @NotNull(message = "No mínimo 1 segundo")
+        @NotNull
+        @Positive
         Integer segundos
 ){}
